@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 const Navbar = () => {
   return (
     <header className="w-full border-b border-slate-200 bg-white/80 backdrop-blur">
@@ -29,9 +31,12 @@ const Navbar = () => {
           <button className="hidden rounded-full px-4 py-2 text-sm font-semibold text-slate-600 transition hover:text-slate-900 md:inline-flex">
             Sign in
           </button>
-          <button className="rounded-full bg-slate-900 px-5 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-slate-800">
+          <Link
+            className="rounded-full bg-slate-900 px-5 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-slate-800"
+            to="/dashboard"
+          >
             Get started
-          </button>
+          </Link>
         </div>
       </nav>
     </header>

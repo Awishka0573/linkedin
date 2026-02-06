@@ -1,15 +1,16 @@
 import './App.css'
-import Navbar from './components/Navbar'
-import Hero from './components/Hero'
-import Footer from './components/Footer'
+import { Routes, Route } from 'react-router-dom'
+import Home from './pages/Home'
+import Dashboard from './pages/Dashboard/Dashboard'
+import NotFound from './pages/NotFound'
 
 function App() {
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-900">
-      <Navbar />
-      <Hero />
-      <Footer />
-    </div>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/dashboard" element={<Dashboard />} />
+      <Route path="*" element={<NotFound />} />
+    </Routes>
   )
 }
 
